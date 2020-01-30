@@ -1,0 +1,28 @@
+{
+    "dev": {
+        "app_function": "app.app",
+        "aws_region": "ap-southeast-1",
+        "project_name": "img-clf-tutorial",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-img-clf-tutorial",
+        "manage_roles":false,
+        "role_name":"zappa_execution_role",
+        "role_arn":"arn:aws:iam::981862055861:role/zappa_execution_role",
+        "slim_handler":true,
+        "debug": false,
+        "keep_warm":false,
+        "log_level":"ERROR",
+        "environment_variables":{
+            "LOG_LEVEL":"dev",
+            "MODEL_PATH":"core/cats_dogs_model_0257_v2.model"
+        },
+        "timeout_seconds":50,
+        "memory_size":512,
+        "exclude": ["*.gz", "*.rar", "*.ipynb", "*.md"],
+        "apigateway_enabled":true,
+        "api_key_required": false,
+        "apigateway_description":"App for classifying images as cats or dogs",
+        "delete_s3_zip": true,
+        "num_retained_versions":1
+    }
+}
